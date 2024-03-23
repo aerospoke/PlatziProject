@@ -1,0 +1,44 @@
+<h1>Labs Section</h1>
+
+<h2>{{title}}</h2>
+
+<hr>
+<div>
+  <h2>Aprendiendo ngFor</h2>
+  <h2>Actualmente hay {{tasks().length}} tareas</h2>
+  <ul>
+    <li *ngFor="let task of tasks(); index as i">
+      <p>{{i}} {{ task }}</p>
+    </li>
+  </ul>
+</div>
+
+<hr>
+
+<div>
+  <h2>Aprendiendo listeners</h2>
+  <input [value]="textForInput" />
+  <input type="number" (change)="changeInput($event)" value="probando el listener" />
+  <button (click)="onClick()">Enviar</button>
+</div>
+
+<hr>
+
+
+<h2>Renderizando lista con mas datos y utilizando variables en las propiedades</h2>
+<div class="containerEmployeeCards">
+  <ul *ngFor="let employee of grupoDeEmpleados">
+    <div class="employeeCard">
+      <img class="imgAvatar" [src]="imagenAvatar" />
+      Nombre del empleado: {{employee.nombre}}<br>
+      Edad del empleado: {{employee.edad}}<br>
+      Firmo las politicas de datos ?: {{employee.politicas ? "Firmado": "Pendiente por firmar"}}<br>
+    </div>
+  </ul>
+</div>
+
+<hr>
+
+<div *ngIf="tasks().length > 3">
+<p>Cumpli la condicional y sali </p>
+</div>

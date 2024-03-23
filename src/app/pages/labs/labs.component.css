@@ -1,0 +1,21 @@
+.employeeCard {
+    width:300px;
+    border: solid 1px #000000;
+    border-radius: 15px;
+    background-color: rgb(172, 172, 255);
+    margin: 2rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.imgAvatar{
+    width: 5rem;
+    height: 5rem;
+    padding-bottom: 2rem;
+    border-radius: 50%;
+}
+.containerEmployeeCards{
+    display: flex;
+}
